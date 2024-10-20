@@ -1,0 +1,1 @@
+"Chess Openings" is an iOS app designed to help users master chess openings through interactive lessons and practice drills. Whether you're a beginner or advanced player, the app offers personalized training with step-by-step guidance on key strategies for popular chess openings.
