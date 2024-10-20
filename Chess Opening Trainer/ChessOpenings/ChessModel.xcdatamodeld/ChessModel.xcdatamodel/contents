@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23C71" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Move" representedClassName="Move" syncable="YES" codeGenerationType="class">
+        <attribute name="moveOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="notation" optional="YES" attributeType="String"/>
+        <relationship name="variation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Variation" inverseName="moves" inverseEntity="Variation"/>
+    </entity>
+    <entity name="Opening" representedClassName="Opening" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="variations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Variation" inverseName="opening" inverseEntity="Variation"/>
+    </entity>
+    <entity name="Variation" representedClassName="Variation" syncable="YES" codeGenerationType="class">
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="moves" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Move" inverseName="variation" inverseEntity="Move"/>
+        <relationship name="opening" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Opening" inverseName="variations" inverseEntity="Opening"/>
+    </entity>
+</model>
